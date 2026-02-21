@@ -6,14 +6,14 @@ import LandingPage from './pages/client/LandingPage'
 import PropertyDetails from './components/houseListPage/PropertyDetails'
 import Properties from './components/houseListPage/PropertyList.jsx'
 import Contact from './components/Contact.jsx'
-import LoginAdmin from './components/admin/LoginAdmin.jsx'
-import RegisterAdmin from './components/admin/RegisterAdmin.jsx'
+import LoginAdmin from './components/admin/loginAdmin.jsx'
+import RegisterAdmin from './components/admin/registerAdmin.jsx'
 import CreateProperty from './pages/admin/CreateProperty.jsx'
 import ManageProperties from './pages/admin/ManageProperties.jsx'
 import ProtectedRouted from './components/admin/protectedRoute.jsx'
 import UpdateProperty from './pages/admin/UpdateProperty.jsx'
 import Analytics from './pages/admin/Analytics.jsx';
-import CreateEmployee from './components/admin/CreateEmployee.jsx';
+import CreateEmployee from './components/admin/createEmployee.jsx';
 import ManageVisitRequests from './components/admin/ManageVisitRequests.jsx';
 import VisitRequestDetail from './components/admin/VisitRequestDetails.jsx';
 import EmployeeDashboard from './components/admin/EmployeeDashboard.jsx';
