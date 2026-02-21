@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Slider from './Slider'
+import Slider from './slider'
 import Map from './map.jsx'
 import Navbar from '../Navbar';
 import Footer from '../Footer';
