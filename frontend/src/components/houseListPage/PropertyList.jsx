@@ -1,4 +1,4 @@
-import { usePropertyStore } from './ListHouse.jsx';
+import { usePropertyStore } from './listhouse.jsx';
 import PropertyCard from './PropertyCard.jsx';
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
