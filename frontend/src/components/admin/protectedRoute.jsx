@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const ProtectedRouted = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(null);

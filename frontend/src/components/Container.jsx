@@ -9,7 +9,7 @@ const container = () => {
 
     // Fetch Top Properties
     useEffect(() => {
-        fetch('http://localhost:3000/api/properties/top')
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/api/properties/top`)
         .then(res => res.json())
         .then(response => {
             if (response.success) {

@@ -7,14 +7,14 @@ import propertiesRoutes from './routes/property.routes.js';
 import adminRoutes from './routes/admin/admin.routes.js';
 import requestRoutes from './routes/request.routes.js';
 import userRoutes from './routes/client/user.routes.js';
-import { connectRedis } from './config/redisClient.js';
+// import { connectRedis } from './config/redisClient.js';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT;
 
-connectRedis();
+// connectRedis();
 
 app.use(express.json());
 app.use(cors()); // enable CORS for all routes

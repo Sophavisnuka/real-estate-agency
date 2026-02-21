@@ -1,4 +1,4 @@
-import { client } from '../config/redisClient.js';
+// import { client } from '../config/redisClient.js';
 import { Amenity, Property, PropertyImages } from '../models/Index.js';
 import { Op, Sequelize } from 'sequelize';
 
@@ -71,19 +71,19 @@ export const getAllProperties = async (req, res) => {
 };
 
 export const countProperties = async (req, res) => {
-    const cacheKey = 'countProperties';
+    // const cacheKey = 'countProperties';
     try {
         // Check Redis cache first
-        const cachedData = await client.get(cacheKey);
-        if (cachedData) {
-            return res.status(200).json({ success: true, source: 'redis', data: cachedData });
-        }
+        // const cachedData = await client.get(cacheKey);
+        // if (cachedData) {
+        //     return res.status(200).json({ success: true, source: 'redis', data: cachedData });
+        // }
 
         // If no cache data, retrieve from database
         const result = await Property.count();
 
         // Cache the data in Redis for 5 minutes (300 seconds)
-        await client.setEx(cacheKey, 300, result);
+        // await client.setEx(cacheKey, 300, result);
 
         res.status(200).json({ success: true, source: 'database', data: result });
     } catch (error) {
@@ -94,13 +94,13 @@ export const countProperties = async (req, res) => {
 
 export const getProperty = async (req, res) => {
     const { id } = req.params;
-    const cacheKey = `property:${id}`;
+    // const cacheKey = `property:${id}`;
 
     try {
-        const cached = await client.get(cacheKey);
-        if (cached) {
-            return res.status(200).json({ success: true, source: 'redis', data: JSON.parse(cached) });
-        }
+        // const cached = await client.get(cacheKey);
+        // if (cached) {
+        //     return res.status(200).json({ success: true, source: 'redis', data: JSON.parse(cached) });
+        // }
 
         const property = await Property.findOne({
             where: { id },
@@ -142,8 +142,8 @@ export const getProperty = async (req, res) => {
         }
         
         // Cache it for 5 minutes
-        await client.setEx(cacheKey, 300, JSON.stringify(raw));
-        await client.del(cacheKey);
+        // await client.setEx(cacheKey, 300, JSON.stringify(raw));
+        // await client.del(cacheKey);
 
         res.status(200).json({ success: true, data: raw });
 
@@ -154,12 +154,12 @@ export const getProperty = async (req, res) => {
 };
 
 export const getTopProperty = async (req, res) => {
-    const cacheKey = 'topProperty';
+    // const cacheKey = 'topProperty';
     try {
-        const cachedData = await client.get('topProperty');
-        if (cachedData) {
-            return res.status(200).json({ success: true, data: JSON.parse(cachedData) });
-        }
+        // const cachedData = await client.get('topProperty');
+        // if (cachedData) {
+        //     return res.status(200).json({ success: true, data: JSON.parse(cachedData) });
+        // }
 
         const result = await Property.findAll({
             attributes: {
@@ -169,7 +169,7 @@ export const getTopProperty = async (req, res) => {
             limit: 6
         });
 
-        await client.setEx(cacheKey, 300, JSON.stringify(result));
+        // await client.setEx(cacheKey, 300, JSON.stringify(result));
 
         res.status(200).json({ success: true, data: result });
     } catch (error) {

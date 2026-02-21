@@ -7,7 +7,7 @@ import Sidebar from '../../components/admin/adminSidebar';
 import Map from '../../components/houseListPage/map.jsx';
 import 'react-toastify/dist/ReactToastify.css'; 
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const UpdateProperty = () => {
     const { id } = useParams();

@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { HiPencil, HiTrash } from 'react-icons/hi2';
 import 'react-toastify/dist/ReactToastify.css';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const ITEMS_PER_PAGE = 6;
 
 const ManageProperties = () => {

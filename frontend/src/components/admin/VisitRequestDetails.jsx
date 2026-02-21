@@ -24,7 +24,7 @@ import { motion } from 'framer-motion';
 import Sidebar from '../../components/admin/adminSidebar';
 import { useParams, useNavigate } from 'react-router-dom';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const formatDateTime = (dateString) => {
   const date = new Date(dateString);

@@ -3,18 +3,18 @@ import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import cloudinary from '../../config/cloudinary.js';
 import { Employee, EmployeeAuth, Property, Amenity, PropertyImages } from '../../models/Index.js';
-import { client } from '../../config/redisClient.js';
+// import { client } from '../../config/redisClient.js';
 
 dotenv.config();
 
 export const getEmployees = async (req, res) => {
-    const cacheKey = 'allEmployees';
+    // const cacheKey = 'allEmployees';
     try {
         // Check Redis cache first
-        const cachedData = await client.get(cacheKey);
-        if (cachedData) {
-            return res.status(200).json({ success: true, source: 'redis', data: JSON.parse(cachedData) });
-        }
+        // const cachedData = await client.get(cacheKey);
+        // if (cachedData) {
+        //     return res.status(200).json({ success: true, source: 'redis', data: JSON.parse(cachedData) });
+        // }
 
         // If no cache data, retrieve from database
         const employees = await Employee.findAll({
@@ -22,7 +22,7 @@ export const getEmployees = async (req, res) => {
         });
 
         // Cache the data in Redis for 5 minutes (300 seconds)
-        await client.setEx(cacheKey, 300, JSON.stringify(employees));
+        // await client.setEx(cacheKey, 300, JSON.stringify(employees));
         
         res.status(200).json({ success: true, data: employees });
     } catch (error) {
