@@ -118,8 +118,8 @@ const PropertyDetails = () => {
     return (
         <div className='w-full'>
             <Navbar />  
-            <div className='px-20 w-full h-full flex gap-5'>
-                <div className='flex-3'>
+            <div className='px-4 sm:px-8 md:px-12 lg:px-20 w-full h-full flex flex-col lg:flex-row gap-5 py-6'>
+                <div className='flex-1 lg:flex-[3]'>
                     <div className='flex flex-col gap-5'>
                         <Slider
                             thumbnail={property.property_thumbnail}
@@ -127,18 +127,18 @@ const PropertyDetails = () => {
                             imageIndex={imageIndex} 
                             setImageIndex={setImageIndex} />
                         <div className='info'>
-                            <div className='flex justify-between gap-5'>
+                            <div className='flex flex-col sm:flex-row justify-between gap-5'>
                                 <div className='flex flex-col gap-3 w-full'>
-                                    <h1 className='font-semibold text-[27px]'>{property.title}</h1>
-                                    <div className='flex gap-2 items-center text-[14px] text-gray-500'>
-                                        <img className='w-[20px] h-[20px]' src="/pin.png" alt="" />
+                                    <h1 className='font-semibold text-xl md:text-2xl lg:text-[27px]'>{property.title}</h1>
+                                    <div className='flex gap-2 items-center text-xs sm:text-sm md:text-[14px] text-gray-500'>
+                                        <img className='w-[16px] h-[16px] sm:w-[20px] sm:h-[20px]' src="/pin.png" alt="" />
                                         <span>{property.address}, {property.city}</span>
                                     </div>
-                                    <div className='w-max rounded-[5px] font-semibold text-[20px] text-green-600'>$ {Number(property.price).toLocaleString()}</div>
+                                    <div className='w-max rounded-[5px] font-semibold text-lg md:text-xl lg:text-[20px] text-green-600'>$ {Number(property.price).toLocaleString()}</div>
                                 </div>
                                 <button
                                     onClick={handleVisitRequest}
-                                    className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition h-fit"
+                                    className="bg-blue-900 text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-blue-800 transition h-fit w-full sm:w-auto"
                                 >
                                     Request Visit
                                 </button>
@@ -177,14 +177,14 @@ const PropertyDetails = () => {
                                     <button type="button" onClick={() => setShowVisitForm(false)} className="ml-2 text-gray-600">Cancel</button>
                                 </form>
                             )}
-                            <div className='mt-[15px] text-[14px] text-gray-500 leading-[20px]'>
+                            <div className='mt-[15px] text-xs sm:text-sm md:text-[14px] text-gray-500 leading-[18px] sm:leading-[20px]'>
                                 {property.description}
                             </div>
 
-                            <div className='details mt-3 flex flex-col gap-7 mt-10'>
+                            <div className='details flex flex-col gap-5 md:gap-7 mt-6 md:mt-10'>
                                 <div className='Details '>
-                                    <h1 className='font-semibold'>Details</h1>
-                                    <div className='grid grid-cols-3 gap-7 mt-5'>
+                                    <h1 className='font-semibold text-base md:text-lg'>Details</h1>
+                                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-7 mt-5'>
                                         <div className='utility flex gap-3 items-center'>
                                             <img className='w-[30px] h-[30px]' src="/size.png" alt="" />
                                             <div>
@@ -208,8 +208,8 @@ const PropertyDetails = () => {
 
                                 {(property.swimming_pool || property.gym || property.parking_lot || property.garden || property.balcony || property.elevator) && (
                                     <div className='General'>
-                                        <h1 className='font-semibold'>Amenities</h1>
-                                        <div className='grid grid-cols-3 gap-7 mt-5'>
+                                        <h1 className='font-semibold text-base md:text-lg'>Amenities</h1>
+                                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-7 mt-5'>
                                             {property.swimming_pool && (
                                                 <div className='w-full flex gap-3 items-center'>
                                                     <img className='w-[30px] h-[30px]' src="/swimming.png" alt="" />
@@ -264,8 +264,8 @@ const PropertyDetails = () => {
 
                                 {(property.security || property.fire_security || property.non_flooding) && (
                                     <div className='security'>
-                                        <h1 className='font-semibold'>Security</h1>
-                                        <div className='grid grid-cols-3 gap-7 mt-5'>
+                                        <h1 className='font-semibold text-base md:text-lg'>Security</h1>
+                                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-7 mt-5'>
                                             {property.fire_security && (
                                                 <div className='utility flex gap-3 items-center'>
                                                     <img className='w-[30px] h-[30px]' src="/fire.png" alt="" />
@@ -296,8 +296,8 @@ const PropertyDetails = () => {
 
                                 {(property.commercial_area || property.playground || property.common_area) && (
                                     <div className='community'>
-                                        <h1 className='font-semibold'>Community Area</h1>
-                                        <div className='grid grid-cols-3 gap-7 mt-5'>
+                                        <h1 className='font-semibold text-base md:text-lg'>Community Area</h1>
+                                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-7 mt-5'>
                                             {property.commercial_area && (
                                                 <div className='utility flex gap-3 items-center'>
                                                     <img className='w-[30px] h-[30px]' src="/commercial.png" alt="" />
@@ -328,18 +328,18 @@ const PropertyDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='mt-12'>
-                        <h1 className='font-semibold text-[22px] mb-4'>Similar Properties</h1>
-                        <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5'>
+                    <div className='mt-8 md:mt-12'>
+                        <h1 className='font-semibold text-lg md:text-xl lg:text-[22px] mb-4'>Similar Properties</h1>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5'>
                             {similarProperties.map(property => (
                                 <PropertyCard key={property.id} property={property} className='flex flex-col gap-3' />
                             ))}
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col flex-2'>
+                <div className='flex flex-col flex-1 lg:flex-[2] mt-6 lg:mt-0'>
                     <div className='flex flex-col gap-2'>
-                        <h1 className='font-semibold text-[20px]'>Location</h1>
+                        <h1 className='font-semibold text-lg md:text-[20px]'>Location</h1>
                         <Map key={property.location_url} src={property.location_url}/>
                     </div>
                     {/* end */}

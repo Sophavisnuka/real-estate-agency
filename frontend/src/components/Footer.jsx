@@ -3,80 +3,80 @@ import React from 'react'
 const footer = () => {
     return (
         <div className='w-full mt-3'>
-            <footer class="w-full bg-gray-900">
-                <div class="mx-auto w-full max-w-screen-l">
-                <div class="flex justify-between gap-8 px-20 py-6 lg:py-8">
+            <footer className="w-full bg-gray-900">
+                <div className="mx-auto w-full max-w-screen-l">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 px-4 sm:px-8 md:px-12 lg:px-20 py-6 lg:py-8">
                     <div>
                         <h2 class="mb-6 text-sm font-semibold uppercase text-white">Company</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class=" hover:underline">About</a>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className=" hover:underline">About</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Careers</a>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Careers</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Brand Center</a>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Brand Center</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Help center</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Discord Server</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Twitter</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Facebook</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Contact Us</a>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Blog</a>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Legal</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Privacy Policy</a>
+                        <h2 className="mb-4 md:mb-6 text-xs sm:text-sm font-semibold text-white uppercase">Help center</h2>
+                        <ul className="text-gray-500 dark:text-gray-400 font-medium text-xs sm:text-sm">
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Discord Server</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Licensing</a>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Twitter</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Facebook</a>
+                            </li>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Contact Us</a>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase text-white">Download</h2>
-                        <ul class="text-gray-500 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">iOS</a>
+                        <h2 className="mb-4 md:mb-6 text-xs sm:text-sm font-semibold text-white uppercase dark:text-white">Legal</h2>
+                        <ul className="text-gray-500 dark:text-gray-400 font-medium text-xs sm:text-sm">
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Privacy Policy</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Android</a>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Licensing</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Windows</a>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Terms &amp; Conditions</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">MacOS</a>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 className="mb-4 md:mb-6 text-xs sm:text-sm font-semibold uppercase text-white">Download</h2>
+                        <ul className="text-gray-500 font-medium text-xs sm:text-sm">
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">iOS</a>
+                            </li>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Android</a>
+                            </li>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">Windows</a>
+                            </li>
+                            <li className="mb-3 md:mb-4">
+                                <a href="#" className="hover:underline">MacOS</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="px-20 py-6 bg-gray-700 md:flex md:items-center md:justify-between">
-                    <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">Outdee™</a>. All Rights Reserved.
+                <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-4 md:py-6 bg-gray-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-300 text-center sm:text-left">© 2023 <a href="https://flowbite.com/">Outdee™</a>. All Rights Reserved.
                     </span>
-                    <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
-                        <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <div className="flex justify-center sm:justify-start space-x-4 md:space-x-5 rtl:space-x-reverse">
+                        <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
                                     <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
                             </svg>

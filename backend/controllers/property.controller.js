@@ -204,9 +204,11 @@ export const getSimilarProperties = async (req, res) => {
                 'title',
                 'price',
                 'city',
+                'address',
                 'property_thumbnail',
                 'bedrooms',
-                'bathrooms'
+                'bathrooms',
+                'size'
             ]
         });
 

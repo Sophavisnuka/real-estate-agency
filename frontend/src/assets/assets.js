@@ -59,7 +59,7 @@ export const testimonialsData = [
         image: gdevith,
         alt: "Portrait of James Washington",
         rating: 5,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
+        text: "Outstanding service! The team went above and beyond to ensure a smooth transaction. They provided valuable market insights and were always available to answer my questions."
     },
     {
         name: "Chhunhour",
@@ -67,27 +67,27 @@ export const testimonialsData = [
         image: img3,
         alt: "Portrait of Richard Nelson",
         rating: 5,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
+        text: "Exceptional professionalism throughout the entire process. Their deep knowledge of the local market and transparent communication made my property purchase stress-free and enjoyable."
     }
 ];
 export const ceoData = [
     {
-        name: "Vannda",
-        title: "Project Manager",
+        name: "Sea Huyty",
+        title: "Full-stack Developer",
         image: vannda,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
+        text: "A developer who is neither good at frontend nor backend."
     },
     {
-        name: "G-Devith",
-        title: "Co-Founder",
+        name: "Khun Sophavisnuka",
+        title: "Full-stack Developer",
         image: img2,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
+        text: "Experienced full-stack developer with expertise in building scalable web applications. Committed to delivering clean, efficient code and innovative solutions."
     },
     {
         name: "Long Chhunhour",
-        title: "UI/UX Designer",
+        title: "Full-stack Developer",
         image: img3,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
+        text: "Passionate software developer with a knack for problem-solving and a love for creating seamless user experiences."
     }
 ];
 export const province = [
